@@ -4,7 +4,7 @@ import {ENV} from "./env.js";
 export const connectDB = async () => {
 
     try{
-        const conn = await mongoose.connect(ENV.MONGO_URI);
+        const conn = await mongoose.connect(ENV.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, ssl: true });
 
         console.log("MOngoDB connected successfully", conn.connection.host);
     }
