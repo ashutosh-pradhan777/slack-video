@@ -7,5 +7,5 @@ const BASE_URL = import.meta.env.MODE === 'development' ?
 
 export const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    withCredentials: True
+    withCredentials: true
 });
