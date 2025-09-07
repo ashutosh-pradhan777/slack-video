@@ -3,11 +3,11 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-reac
 import { Navigate, Route, Routes } from 'react-router';
 import HomePage from './pages/HomePage';
 import AuthPage from './pages/AuthPage';
+import toast from 'react-hot-toast'
 
 const App = () => {
   return (
     <>
-      
       <SignedIn>
         <Routes> 
           <Route path='/' element={<HomePage/>} ></Route>
